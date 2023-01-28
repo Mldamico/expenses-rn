@@ -1,13 +1,14 @@
 import { FlatList, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { Expense } from "../../interfaces/expenses";
+import ExpenseItem from "./ExpenseItem";
 
 interface Props {
   expenses: Expense[];
 }
 
 function renderExpenseItem({ item }: { item: Expense }) {
-  return <Text>{item.description}</Text>;
+  return <ExpenseItem {...item} />;
 }
 
 const ExpensesList = ({ expenses }: Props) => {
