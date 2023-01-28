@@ -3,10 +3,14 @@ import React from "react";
 
 export default function ManageExpenses() {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>ManageExpenses</Text>
     </View>
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});

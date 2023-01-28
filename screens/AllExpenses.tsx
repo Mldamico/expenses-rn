@@ -5,10 +5,14 @@ import { DUMMY_EXPENSES } from "../data/dummy";
 
 export default function AllExpenses() {
   return (
-    <View>
+    <View style={styles.container}>
       <ExpensesOutput expenses={DUMMY_EXPENSES} periodName="Total" />
     </View>
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});

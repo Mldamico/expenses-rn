@@ -3,6 +3,7 @@ import React from "react";
 import ExpensesSummary from "./ExpensesSummary";
 import ExpensesList from "./ExpensesList";
 import { Expense } from "../../interfaces/expenses";
+import { GlobalStyles } from "../../constants/styles";
 
 interface Props {
   expenses: Expense[];
@@ -11,11 +12,17 @@ interface Props {
 
 export default function ExpensesOutput({ expenses, periodName }: Props) {
   return (
-    <View>
+    <View style={styles.container}>
       <ExpensesSummary expenses={expenses} periodName={periodName} />
       <ExpensesList expenses={expenses} />
     </View>
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 24,
+    backgroundColor: GlobalStyles.colors.primary700,
+  },
+});
